@@ -32,7 +32,7 @@ id_lookup = pd.read_pickle("Data/id_lookup.pkl")
 # load_dotenv()
 import clarivate.wos_starter.client
 from clarivate.wos_starter.client.rest import ApiException
-api = os.getenv.get('WOS_API')
+api = os.environ.get('WOS_API')
 configuration = clarivate.wos_starter.client.Configuration(
     host = "http://api.clarivate.com/apis/wos-starter/v1"
 )
