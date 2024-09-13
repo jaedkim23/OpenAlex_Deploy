@@ -29,7 +29,7 @@ emp = CAS[CAS['position'].str.contains(pattern, case=False, na=False)]
 id_lookup = pd.read_pickle("Data/id_lookup.pkl")
 
 #####################################
-load_dotenv()
+# load_dotenv()
 import clarivate.wos_starter.client
 from clarivate.wos_starter.client.rest import ApiException
 api = '1228ec5f8a29051d5dd8a7fbbd01a114d6de7ef1'
