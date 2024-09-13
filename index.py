@@ -12,8 +12,8 @@ from dash import dash_table
 
 current_year = datetime.datetime.now().year
 
-# app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], suppress_callback_exceptions=True)
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], suppress_callback_exceptions=True)
+# app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 
 # #####################################
@@ -29,7 +29,7 @@ emp = CAS[CAS['position'].str.contains(pattern, case=False, na=False)]
 id_lookup = pd.read_pickle("Data/id_lookup.pkl")
 
 #####################################
-# load_dotenv()
+load_dotenv()
 import clarivate.wos_starter.client
 from clarivate.wos_starter.client.rest import ApiException
 api = os.environ.get('WOS_API')
