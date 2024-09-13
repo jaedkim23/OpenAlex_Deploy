@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from dotenv import load_dotenv
 import requests
@@ -25,9 +26,10 @@ emp = CAS[CAS['position'].str.contains(pattern, case=False, na=False)]
 id_lookup = pd.read_pickle("Data/id_lookup.pkl")
 
 #####################################
+load_dotenv()
 import clarivate.wos_starter.client
 from clarivate.wos_starter.client.rest import ApiException
-api = '1228ec5f8a29051d5dd8a7fbbd01a114d6de7ef1'
+api = os.getenv("WOS_API")
 configuration = clarivate.wos_starter.client.Configuration(
     host = "http://api.clarivate.com/apis/wos-starter/v1"
 )
