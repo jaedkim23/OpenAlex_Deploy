@@ -34,7 +34,7 @@ import clarivate.wos_starter.client
 from clarivate.wos_starter.client.rest import ApiException
 api = '1228ec5f8a29051d5dd8a7fbbd01a114d6de7ef1'
 configuration = clarivate.wos_starter.client.Configuration(
-    host = "http://api.clarivate.com/apis/wos-starter/v1"
+    host = "https://api.clarivate.com/apis/wos-starter/v1"
 )
 configuration.api_key['ClarivateApiKeyAuth'] = api
 api_inst= clarivate.wos_starter.client.DocumentsApi(clarivate.wos_starter.client.ApiClient(configuration))
